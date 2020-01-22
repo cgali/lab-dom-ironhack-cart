@@ -23,11 +23,25 @@ function calcAll() {
   let total = document.querySelector('h2 > span');
   let totalPrice = 0;
   
-
+  // Iteration 2
   products.forEach(element => {
     updateSubtot(element);
+    // Iteration 3
     totalPrice += updateSubtot(element);
     });
     total.innerHTML = totalPrice;
 }
 $calc.onclick = calcAll;
+
+
+let deleteButtons = $cart.querySelectorAll('.btn-delete');
+
+function del() {
+  deleteButtons.forEach(element => {
+    element.addEventListener('click', event => {
+      let productContainer = element.parentNode.parentNode.parentNode;
+      productContainer.removeChild(element.parentNode.parentNode);
+    })
+  })
+}
+$cart.onclick = del;
