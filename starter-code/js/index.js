@@ -33,7 +33,7 @@ function calcAll() {
 }
 $calc.onclick = calcAll;
 
-
+//Iteration 4
 let deleteButtons = $cart.querySelectorAll('.btn-delete');
 
 function del() {
@@ -45,3 +45,9 @@ function del() {
   })
 }
 $cart.onclick = del;
+
+//Iteration 5
+
+let createButton = document.getElementById('create');
+let productName = document.querySelector('.new input[type="text"]').value;
+let productPrice = document.querySelector('.new input[type="number"]').value;
